@@ -1,0 +1,68 @@
+$git-red: #f34f29;
+
+.container {
+  width: 200px;
+  margin: 150px auto;
+  
+  .git {
+    height: 150px;
+    width: 150px;
+    border-radius: 5%;
+    margin: 0 auto;
+    background: $git-red;
+    transform: rotate(45deg);
+    overflow: hidden;
+    &:after{
+      display: block;
+      content: "";
+      width: 15px;
+      height: 210px;
+      background: #fff;
+      transform: 
+        rotate(-90deg)
+        translateX(60px);
+      z-index: 10;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 90px;
+      background: #fff;
+      border-radius: 5px 5px 0 0;
+      transform: 
+        rotate(-45deg)
+        translateY(70px)
+        translateX(32px);
+    }
+    .dots {
+      height: 37px;
+      width: 37px;
+      border-radius: 50%;
+      position: absolute;
+      background: #fff;
+      transform:
+        translateX(101px)
+        translateY(29px);
+      box-shadow:
+        0px 65px 0 0 #fff,
+        -60px 0px 0 0px #fff;
+    }
+  }
+  &:hover {
+    animation: wiggle 500ms linear infinite;
+  }
+}
+
+body {
+  background: #1e2327;
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(0);}
+  25% {transform: rotate(15deg);}
+  50% {transform: rotate(0);}
+  75% {transform: rotate(-15deg);}
+  100% {transform: rotate(0);}
+}

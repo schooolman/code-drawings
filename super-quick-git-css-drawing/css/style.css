@@ -1,0 +1,99 @@
+.container {
+  width: 200px;
+  margin: 150px auto;
+}
+.container .git {
+  height: 150px;
+  width: 150px;
+  border-radius: 5%;
+  margin: 0 auto;
+  background: #f34f29;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  overflow: hidden;
+}
+.container .git:after {
+  display: block;
+  content: "";
+  width: 15px;
+  height: 210px;
+  background: #fff;
+  -webkit-transform: rotate(-90deg) translateX(60px);
+          transform: rotate(-90deg) translateX(60px);
+  z-index: 10;
+}
+.container .git:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 90px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  -webkit-transform: rotate(-45deg) translateY(70px) translateX(32px);
+          transform: rotate(-45deg) translateY(70px) translateX(32px);
+}
+.container .git .dots {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transform: translateX(101px) translateY(29px);
+          transform: translateX(101px) translateY(29px);
+  box-shadow: 0px 65px 0 0 #fff, -60px 0px 0 0px #fff;
+}
+.container:hover {
+  -webkit-animation: wiggle 500ms linear infinite;
+          animation: wiggle 500ms linear infinite;
+}
+
+body {
+  background: #1e2327;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
