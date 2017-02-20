@@ -1,0 +1,112 @@
+//variables
+$background: #0d242f;
+$sloth-light: #ffeac5;
+$sloth-dark: #a38a73;
+
+.frame {
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  
+  .sloth {
+    &-head {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      background-color: $sloth-dark;
+      overflow: hidden;
+      box-shadow:
+        -30px 5px 0 0 $background,
+        -20px 0px 0 0px $sloth-dark,
+        -27px -5px 0 0px $background,
+        -7px -5px 0 0 $sloth-dark;
+      // &:after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   height: 100px;
+      //   width: 100px;
+      //   background: $background;
+      //   transform: translate(-4px, -28px);
+      //   border-radius: 100px;
+      //   box-shadow:
+      //     22px -5px 0 1px $sloth-dark;
+      // }
+    }
+    &-eyes {
+      display: block;
+      height: 8px;
+      width: 8px;
+      border-radius: 8px;
+      position: absolute;
+      background: #000;
+      z-index: 10;
+      transform: 
+        translateY(-38px)
+        translateX(15px);
+      box-shadow: 52px -1px 0 0 #000;
+    }
+    &-inner {
+      height: 90px;
+      width: 60px;
+      border-radius: 50px;
+      background: $sloth-light;
+      transform: 
+        translateY(30px)
+        translateX(-5px);
+      box-shadow:
+        40px 0 0 5px $sloth-light;
+      &:before {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 40px;
+        background: $sloth-dark;
+        border-radius: 30px;
+        transform:
+          translateY(20px)
+          translateX(-5px)
+          rotate(-20deg);
+      }
+      &:after {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 50px;
+        background: $sloth-dark;
+        border-radius: 30px;
+        transform:
+          translateY(0px)
+          translateX(65px)
+          rotate(20deg);
+      }
+    }
+    &-finesse {
+      display: block;
+      height: 30px;
+      width: 35px;
+      border-radius: 30px;
+      background-color: $sloth-light;
+      transform: translateY(-25px);
+      box-shadow:
+        -6px -20px 0 0 $sloth-dark;
+      &:after {
+        content: "";
+              display: block;
+      height: 55px;
+      width: 45px;
+      border-radius: 45px;
+      background-color: $sloth-light;
+      transform: translateY(-3px)
+        translateX(50px)
+        rotate(25deg);
+      }
+      
+      
+    }
+  }
+}
+
+body {
+  background-color: $background;
+}
